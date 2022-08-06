@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="sumEven" class="sumEven" placeholder="even number">;
+    <input type="button" value="generate even" onclick="evenSum()">;
+    <p id="paraId"></p>
+</body>
+
+</html>
+<script>
+
+    function evenSum() {
+        let x = document.getElementById("sumEven").value;
+        console.log(x);
+        let y = 1;
+        let output = 0;
+        while (y <= x) {
+            console.log("y", y);
+            if (y % 2 == 0) {
+                output = output + y;
+            }
+            y++;
+        }
+        document.getElementById("paraId").innerHTML = output
+        console.log(output);
+    }
+
+
+
+</script>

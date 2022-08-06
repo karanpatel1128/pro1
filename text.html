@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="factorialId" name="factorialid" placeholder="enter any number">
+    <input type="button" value="generateFactorial" onclick="factoriaNumber();" />
+    <P id="paraId"></P>
+
+
+    <input type="number" id="tabelId" name="tabelid" placeholder="enter any number">
+    <input type="button" value="generateTable" onclick="tabelNumber();" />
+    <P id="mainPara"></P>
+
+
+</body>
+
+</html>
+<script>
+
+    function factoriaNumber() {
+        let x = document.getElementById("factorialId").value
+        let y = 1;
+        let output = 1;
+        while (x >= y) {
+            output = output * y;
+            y++;
+
+        }
+        document.getElementById("paraId").innerHTML = output;
+        console.log(output)
+    }
+
+    function tabelNumber() {
+        let a = document.getElementById("tabelId").value;
+        let b = 1;
+        let output = "";
+        while (b <= 10) {
+            output = a * b
+            output = output + "<br/>";
+            console.log("output", output);
+            b++;
+        }
+        document.getElementById("mainPara").innerHTML = output;
+
+    }
+
+
+</script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <input type="number" id="starPrint" name="starPrint" placeholder="enter number" />
+  <input type="button" value="startype" onclick="starType();" />
+  <p id="paraId"></p>
+
+  <input type="number" id="numberId" name="numberId" placeholder="enter number" />
+  <input type="button" value="numbertype" onclick="numberType();" />
+  <p id="mainPara"></p>
+
+
+</body>
+
+</html>
+<script>
+
+  function starType() {
+    let x = document.getElementById("starPrint").value;
+    console.log("username", x);
+    let y = x; 
+    let output = ""
+    while (y >= 1) {
+      output = output+y+"<br>";
+      y--  ;
+    }
+    document.getElementById("paraId").innerHTML = output
+    console.log(output);
+  }
+
+  function numberType() {
+    let a = document.getElementById("numberId").value;
+    console.log(a);
+    let b = 1;
+    let sum = "";
+    while (b <= a) {
+      let c = 1;
+      while (c <= b) {
+        sum = sum + c;
+        c++;
+      }
+      sum = sum + "<br/>"
+      b++;
+    }
+    document.getElementById("mainPara").innerHTML = sum;
+    console.log(sum);
+  
+  
+  
+  
+  }
+
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="naturelNumber" class="naturel-number" placeholder="number">;
+    <input type="button" value="number" onclick="naturalNumber();">
+    <p id="paraId"></p>
+
+    <input type="number" id="squareNumber" class="square-number" placeholder="squarenumber">;
+    <input type="button" value="square" onclick="squareNumber();">
+    <p id="mainPara"></p>
+
+</body>
+</html>
+<script>
+function squareNumber () {
+let x=document.getElementById("squareNumber").value
+let y =x;
+let sum="";
+let action="mult";
+switch (action) {
+    case "mult":
+        sum=x*y;
+        break;
+
+    default:
+    sum=x+y;
+        break;
+}
+document.getElementById("mainPara").innerHTML=sum;
+}
+
+function naturalNumber () {
+let x=document.getElementById("naturelNumber").value
+let y =1;
+let output=0;
+while (y<=x) {
+    output=output+y+"<br/>";
+    y++
+}
+document.getElementById("paraId").innerHTML=output
+}
+
+
+
+
+</script>

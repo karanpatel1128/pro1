@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="tableNumber" name="tableNumber" placeholder="enter any number">
+    <input type="button" value="generateTable" onclick="table();" />
+    <P id="paraId"></P>
+
+    <input type="number" id="userTable" name="userTable" placeholder="find and factorial">
+    <input type="button" value="generateTable" onclick="crossTable();" />
+    <P id="mainPara"></P>
+</body>
+</html>
+<script>
+
+function table() {
+ let tableNumber=document.getElementById("tableNumber").value;  
+let x= 1;
+let sum="";
+while (x <= 10) {
+    let mult=x * tableNumber;
+    sum += "<br>"+mult+"</br>";
+    x++;
+}
+document.getElementById("paraId").innerHTML=sum;
+console.log(sum);
+}
+
+function crossTable() {
+    let p =document.getElementById("userTable").value;
+    let y=document.getElementById("userTable").value;
+    let a=1;
+    let output="";
+   while (y>=1) {
+      let multiply=y*a;
+      a=multiply;
+      
+      y--;
+    }
+    document.getElementById("mainPara").innerHTML=a
+    console.log(output)
+    }
+
+
+    
+
+
+
+
+
+
+
+</script>

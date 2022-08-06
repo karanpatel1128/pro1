@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="calculaterId" class="calculaterid" placeholder="number" />;
+    <input type="number" id="basicId" class="calculaterid" placeholder="number" />
+    <input type="button" value="+" onclick="addition();" />
+    <input type="button" value="x" onclick="multiply();" />
+    <input type="button" value="-" onclick="subtraction();" />
+    <input type="button" value="%" onclick="divide();" />
+    <p id="mainPara"></p>
+
+</body>
+</html>
+<script>
+ function addition() {
+     let a = parseInt(document.getElementById("calculaterId").value);
+     let b = parseInt(document.getElementById("basicId").value);
+     let sum = a+b;
+     console.log("addition",sum);
+    document.getElementById("mainPara").innerHTML=sum;
+}
+
+function subtraction() {
+     let a = document.getElementById("calculaterId").value;
+     let b = document.getElementById("basicId").value;
+     let sum = a-b;
+     console.log("addition",sum);
+    document.getElementById("mainPara").innerHTML=sum;
+}
+
+function multiply() {
+     let a = document.getElementById("calculaterId").value;
+     let b = document.getElementById("basicId").value;
+     let sum = a*b;
+     console.log("addition",sum);
+    document.getElementById("mainPara").innerHTML=sum;
+}
+
+function divide() {
+     let a = document.getElementById("calculaterId").value;
+     let b = document.getElementById("basicId").value;
+     let sum = a/b;
+     console.log("addition",sum);
+    document.getElementById("mainPara").innerHTML=sum;
+}
+</script>
